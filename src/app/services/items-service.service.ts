@@ -74,7 +74,9 @@ export class ItemsServiceService {
         name: "Велопоход 4 к.с. по Кольскому п-ву",
         date: "14-29.07.2018",
         track: "https://www.gpsies.com/map.do?fileId=ghqkvmkegjdrkwbk",
-        distance: 623.19,
+        report:
+          "https://drive.google.com/drive/u/0/folders/1-7M09DJhyAeIiVkqZAmAQoh98m3S2peq",
+        distance: 623.19
       },
       {
         id: 4,
