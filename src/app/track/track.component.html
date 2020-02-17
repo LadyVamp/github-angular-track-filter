@@ -11,9 +11,9 @@
 				</mat-option>
 			</mat-select>
 		</div>
-
+		<p>Для просмотра детальной информации нажмите на название</p>
 		<div class="scrollbar" id="style-default">
-			<p>Для просмотра детальной информации нажмите на название</p>
+
 			<table mat-table [dataSource]="dataSourceItems" class="mat-elevation-z8 itemsTable">
 				<ng-container matColumnDef="flag">
 					<th mat-header-cell *matHeaderCellDef class="itemsTable__header"> &nbsp;</th>
@@ -47,7 +47,7 @@
 					<td mat-cell *matCellDef="let item" [attr.data-id]='item.id'>{{item.country3.name}}</td>
 				</ng-container>
 				<ng-container matColumnDef="name">
-					<th mat-header-cell *matHeaderCellDef class="itemsTable__header"> Название </th>
+					<th mat-header-cell *matHeaderCellDef class="itemsTable__header name"> Название </th>
 					<td mat-cell *matCellDef="let item" [attr.data-id]='item.id' routerLink="/detail/{{item.id}}"
 						class="name"> {{item.name}}</td>
 				</ng-container>

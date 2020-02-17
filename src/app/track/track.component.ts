@@ -71,22 +71,26 @@ export class TrackComponent implements OnInit {
     {
       name: "Армения",
       id: 3
-    },
-    {
-      name: "Азербайджан",
-      id: 4
-    },
-    {
-      name: "Грузия",
-      id: 5
     }
+    // {
+    //   name: "Азербайджан",
+    //   id: 4
+    // },
+    // {
+    //   name: "Грузия",
+    //   id: 5
+    // }
   ];
 
   applyFilter(filterValue: string) {
     this.fillTableItems(); //все треки
 
     if (filterValue != "Все") {
-      //фильтр по странам
+      //фильтр по странам     
+      /* 
+        только country
+        todo добавить country2, country3
+      */
       // console.log(filterValue);
       this.dataSourceItems.filterPredicate = (data: IItem, filter: string) =>
         !filter ||

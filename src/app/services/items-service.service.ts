@@ -11,7 +11,7 @@ export class ItemsServiceService {
   // https://snipboard.io/NDibya.jpg Азербайджан
   // https://snipboard.io/W4awRn.jpg Армения
   // https://snipboard.io/uPTQIh.jpg Россия
-  // https://snipboard.io/K5OUY9.jpg Грузия
+  // https://snipboard.io/tYsyAB.jpg Грузия
 
   getItems(
     id?: number
@@ -115,7 +115,7 @@ export class ItemsServiceService {
         country3: {
           id: 5,
           name: "Грузия",
-          flag: "https://snipboard.io/K5OUY9.jpg"
+          flag: "https://snipboard.io/tYsyAB.jpg"
         },
         name: "Кочари",
         date: "14.09-28.09.2019",
