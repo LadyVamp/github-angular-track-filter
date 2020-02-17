@@ -37,6 +37,7 @@ export class ItemsServiceService {
           flag: "https://snipboard.io/uPTQIh.jpg"
         },
         country2: { id: 1, name: "", flag: "" },
+        country3: { id: 1, name: "", flag: "" },
         region: { id: 12, name: "Нижегородская обл." },
         name: "Велопоход 1 к.с. по Нижегородской области",
         date: "16-22.09.2017",
