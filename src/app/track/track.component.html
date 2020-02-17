@@ -42,7 +42,7 @@
 					<th mat-header-cell *matHeaderCellDef class="itemsTable__header"> </th>
 					<td mat-cell *matCellDef="let item" [attr.data-id]='item.id'>{{item.country2.name}}</td>
 				</ng-container>
-				<ng-container matColumnDef="country3">
+				<ng-container matColumnDef="country3" *ngIf="item.country3.name">
 					<th mat-header-cell *matHeaderCellDef class="itemsTable__header"> </th>
 					<td mat-cell *matCellDef="let item" [attr.data-id]='item.id'>{{item.country3.name}}</td>
 				</ng-container>
