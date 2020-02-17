@@ -3,73 +3,84 @@
 		{{title}}
 		<div class="flex-row-btn">
 			<input matInput (keyup)="search($event.target.value)" placeholder="Поиск" autocomplete="off">
-          <br>
-            <mat-label>Выберите страну</mat-label>
-              <mat-select #select placeholder="Страна" (selectionChange)="applyFilter($event.value)">
-                <mat-option *ngFor="let country of countries" [value]="country.name">
-                    {{country.name}}
-                </mat-option>
-               </mat-select>
-        </div>
+			<br>
+			<mat-label>Выберите страну</mat-label>
+			<mat-select #select placeholder="Страна" (selectionChange)="applyFilter($event.value)">
+				<mat-option *ngFor="let country of countries" [value]="country.name">
+					{{country.name}}
+				</mat-option>
+			</mat-select>
+		</div>
 
-        <div class="scrollbar" id="style-default">
-          <p>Для просмотра детальной информации нажмите на название</p>
-            <table mat-table [dataSource]="dataSourceItems" class="mat-elevation-z8 itemsTable">
-                <ng-container matColumnDef="flag">
-                    <th mat-header-cell *matHeaderCellDef class="itemsTable__header"> &nbsp;</th>
-                    <td mat-cell *matCellDef="let item" [attr.data-id]='item.id'>
-                        <img src="{{ item.country.flag }}">
+		<div class="scrollbar" id="style-default">
+			<p>Для просмотра детальной информации нажмите на название</p>
+			<table mat-table [dataSource]="dataSourceItems" class="mat-elevation-z8 itemsTable">
+				<ng-container matColumnDef="flag">
+					<th mat-header-cell *matHeaderCellDef class="itemsTable__header"> &nbsp;</th>
+					<td mat-cell *matCellDef="let item" [attr.data-id]='item.id'>
+						<img src="{{ item.country.flag }}">
                     </td>
-                </ng-container>
-                <ng-container matColumnDef="flag2">
-                    <th mat-header-cell *matHeaderCellDef class="itemsTable__header"> &nbsp;</th>
-                    <td mat-cell *matCellDef="let item" [attr.data-id]='item.id'>
-                        <img src="{{ item.country2.flag }}">
+				</ng-container>
+				<ng-container matColumnDef="flag2">
+					<th mat-header-cell *matHeaderCellDef class="itemsTable__header"> &nbsp;</th>
+					<td mat-cell *matCellDef="let item" [attr.data-id]='item.id'>
+						<img src="{{ item.country2.flag }}">
                     </td>
-                </ng-container>
-               
-                <ng-container matColumnDef="country">
-                    <th mat-header-cell *matHeaderCellDef class="itemsTable__header">Страна </th>
-                    <td mat-cell *matCellDef="let item" [attr.data-id]='item.id' >{{item.country.name}}</td>
-                </ng-container>
-                <ng-container matColumnDef="country2">
-                    <th mat-header-cell *matHeaderCellDef class="itemsTable__header"> </th>
-                    <td mat-cell *matCellDef="let item" [attr.data-id]='item.id' >{{item.country2.name}}</td>
-                </ng-container>
-                <ng-container matColumnDef="name">
-                    <th mat-header-cell *matHeaderCellDef class="itemsTable__header"> Название </th>
-                    <td mat-cell *matCellDef="let item" [attr.data-id]='item.id' routerLink="/detail/{{item.id}}" class="name"> {{item.name}}</td>
-                </ng-container>
-                <ng-container matColumnDef="date">
-                    <th mat-header-cell *matHeaderCellDef class="itemsTable__header date"> Даты </th>
-                    <td mat-cell *matCellDef="let item"> {{item.date}}</td>
-                </ng-container>
-                <ng-container matColumnDef="track">
-                    <th mat-header-cell *matHeaderCellDef class="itemsTable__header"> Трек </th>
-                    <td mat-cell *matCellDef="let item" class="track">
-                      <a href="{{item.track}}" target="_blank">{{item.track}}</a>         
+				</ng-container>
+				<ng-container matColumnDef="flag3">
+					<th mat-header-cell *matHeaderCellDef class="itemsTable__header"> &nbsp;</th>
+					<td mat-cell *matCellDef="let item" [attr.data-id]='item.id'>
+						<img src="{{ item.country3.flag }}">
                     </td>
-                </ng-container>
-                <ng-container matColumnDef="distance">
-                    <th mat-header-cell *matHeaderCellDef class="itemsTable__header"> Расстояние</th>
-                    <td mat-cell *matCellDef="let item" class="distance">
-                     {{item.distance}} 
-                    </td>
-                </ng-container>
-                <ng-container matColumnDef="report">
-                    <th mat-header-cell *matHeaderCellDef class="itemsTable__header"> Отчет </th>
-                    <td mat-cell *matCellDef="let item" class="report">
-                      <a href="{{item.report}}" target="_blank">{{item.report}}</a>      
-                    </td>
-                </ng-container>
-                <tr mat-header-row *matHeaderRowDef="displayedColumnsItems"></tr>
-                <tr mat-row *matRowDef="let row; columns: displayedColumnsItems;"></tr>
-            </table>
-        </div>
+				</ng-container>
 
-    </div>
+				<ng-container matColumnDef="country">
+					<th mat-header-cell *matHeaderCellDef class="itemsTable__header">Страна </th>
+					<td mat-cell *matCellDef="let item" [attr.data-id]='item.id'>{{item.country.name}}</td>
+				</ng-container>
+				<ng-container matColumnDef="country2">
+					<th mat-header-cell *matHeaderCellDef class="itemsTable__header"> </th>
+					<td mat-cell *matCellDef="let item" [attr.data-id]='item.id'>{{item.country2.name}}</td>
+				</ng-container>
+				<ng-container matColumnDef="country3">
+					<th mat-header-cell *matHeaderCellDef class="itemsTable__header"> </th>
+					<td mat-cell *matCellDef="let item" [attr.data-id]='item.id'>{{item.country3.name}}</td>
+				</ng-container>
+				<ng-container matColumnDef="name">
+					<th mat-header-cell *matHeaderCellDef class="itemsTable__header"> Название </th>
+					<td mat-cell *matCellDef="let item" [attr.data-id]='item.id' routerLink="/detail/{{item.id}}"
+						class="name"> {{item.name}}</td>
+				</ng-container>
+				<ng-container matColumnDef="date">
+					<th mat-header-cell *matHeaderCellDef class="itemsTable__header date"> Даты </th>
+					<td mat-cell *matCellDef="let item"> {{item.date}}</td>
+				</ng-container>
+				<ng-container matColumnDef="track">
+					<th mat-header-cell *matHeaderCellDef class="itemsTable__header"> Трек </th>
+					<td mat-cell *matCellDef="let item" class="track">
+						<a href="{{item.track}}" target="_blank">{{item.track}}</a>
+					</td>
+				</ng-container>
+				<ng-container matColumnDef="distance">
+					<th mat-header-cell *matHeaderCellDef class="itemsTable__header"> Расстояние</th>
+					<td mat-cell *matCellDef="let item" class="distance">
+						{{item.distance}}
+					</td>
+				</ng-container>
+				<ng-container matColumnDef="report">
+					<th mat-header-cell *matHeaderCellDef class="itemsTable__header"> Отчет </th>
+					<td mat-cell *matCellDef="let item" class="report">
+						<a href="{{item.report}}" target="_blank">{{item.report}}</a>
+					</td>
+				</ng-container>
+				<tr mat-header-row *matHeaderRowDef="displayedColumnsItems"></tr>
+				<tr mat-row *matRowDef="let row; columns: displayedColumnsItems;"></tr>
+			</table>
+		</div>
 
-    <!-- <div class="paginator">
+	</div>
+
+	<!-- <div class="paginator">
         <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
     </div> -->
 

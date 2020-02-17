@@ -1,33 +1,39 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { ItemsServiceService } from '../services/items-service.service';
-import { MatTableDataSource } from '@angular/material';
-import { IItem } from '../interfaces';
-import { MatPaginator } from '@angular/material/paginator';
-import { DatePipe } from '@angular/common';
-import { FormControl, FormGroup } from '@angular/forms';
-import { FormBuilder } from '@angular/forms';
+import { Component, OnInit, ViewChild } from "@angular/core";
+import { ItemsServiceService } from "../services/items-service.service";
+import { MatTableDataSource } from "@angular/material";
+import { IItem } from "../interfaces";
+import { MatPaginator } from "@angular/material/paginator";
+import { DatePipe } from "@angular/common";
+import { FormControl, FormGroup } from "@angular/forms";
+import { FormBuilder } from "@angular/forms";
 
 @Component({
-  selector: 'app-track',
-  templateUrl: './track.component.html',
-  styleUrls: ['./track.component.less'],
+  selector: "app-track",
+  templateUrl: "./track.component.html",
+  styleUrls: ["./track.component.less"]
 })
-
 export class TrackComponent implements OnInit {
-  title = 'Треки';
+  title = "Треки";
 
   dataSourceItems: MatTableDataSource<IItem>;
-  displayedColumnsItems: string[] = ['flag', 'flag2', 'country', 'country2','name', 'date', 'track', 'report', 'distance']; 
+  displayedColumnsItems: string[] = [
+    "flag",
+    "flag2",
+    "country",
+    "country2",
+    "country3",
+    "name",
+    "date",
+    "track",
+    "report",
+    "distance"
+  ];
 
   filterShowCompleted = new FormGroup({
-    showCompleted: new FormControl(),
+    showCompleted: new FormControl()
   });
 
-  constructor(
-    private itServ: ItemsServiceService,
-  ) {
-    
-  }
+  constructor(private itServ: ItemsServiceService) {}
 
   fillTableItems() {
     const items: Array<IItem> = this.itServ.getItems();
@@ -50,37 +56,45 @@ export class TrackComponent implements OnInit {
 
   countries = [
     {
-      name: 'Все',
+      name: "Все",
       id: 0
     },
     {
-      name: 'Россия',
+      name: "Россия",
       id: 1
     },
     {
-      name: 'Абхазия',
+      name: "Абхазия",
       id: 2
     },
     {
-      name: 'Армения',
+      name: "Армения",
       id: 3
+    },
+    {
+      name: "Азербайджан",
+      id: 4
+    },
+    {
+      name: "Грузия",
+      id: 5
     }
-  ]
+  ];
 
   applyFilter(filterValue: string) {
     this.fillTableItems(); //все треки
 
-    if (filterValue != 'Все') { //фильтр по странам
+    if (filterValue != "Все") {
+      //фильтр по странам
       // console.log(filterValue);
-      this.dataSourceItems.filterPredicate =
-        (data: IItem, filter: string) => !filter || data.country.name.toLowerCase().trim() == filter.toLowerCase().trim();
+      this.dataSourceItems.filterPredicate = (data: IItem, filter: string) =>
+        !filter ||
+        data.country.name.toLowerCase().trim() == filter.toLowerCase().trim();
       this.dataSourceItems.filter = filterValue;
 
       if (this.dataSourceItems.paginator) {
         this.dataSourceItems.paginator.firstPage();
       }
     }
-
   }
-
 }
