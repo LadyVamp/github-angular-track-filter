@@ -19,6 +19,7 @@ export class TrackComponent implements OnInit {
   displayedColumnsItems: string[] = [
     "flag",
     "flag2",
+    "flag3",
     "country",
     "country2",
     "country3",
