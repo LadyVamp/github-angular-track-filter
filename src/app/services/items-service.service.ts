@@ -76,7 +76,7 @@ export class ItemsServiceService {
         country2: { id: 1, name: "", flag: "" },
         country3: { id: 1, name: "", flag: "" },
         region: { id: 51, name: "Мурманская обл." },
-        name: "Велопоход 4 к.с. по Кольскому п-ву",
+        name: "Велопоход 4 к.с. по Кольскому полуострову",
         date: "14.07-29.07.2018",
         track: "https://www.gpsies.com/map.do?fileId=ghqkvmkegjdrkwbk",
         report:
