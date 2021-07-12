@@ -94,7 +94,7 @@ export class ItemsServiceService {
         country3: { id: 1, name: '', flag: '' },
         region: { id: 91, name: 'Крым' },
         name: 'Велопутешествие из Кавказа в Крым',
-        date: '30.04-15.05.2019',
+        date: '30.04 - 15.05.2019',
         track: 'https://www.gpsies.com/map.do?fileId=pguhcytgaiqkexrn',
         report:
           'https://zen.yandex.ru/media/id/5d3eca34ae56cc00addf0751/beguscie-za-solncem-velopohod-iz-kavkaza-v-krym-i-5d41c35746f4ff00ad446484',
@@ -118,7 +118,7 @@ export class ItemsServiceService {
           flag: 'https://snipboard.io/tYsyAB.jpg'
         },
         name: 'Кочари',
-        date: '14.09-28.09.2019',
+        date: '14.09 - 28.09.2019',
         track: 'https://www.gpsies.com/map.do?fileId=qtekctbpgrepjjhj',
         distance: 938.52
       },
@@ -131,8 +131,9 @@ export class ItemsServiceService {
         },
         country2: { id: 1, name: '', flag: '' },
         country3: { id: 1, name: '', flag: '' },
-        name: 'Маршрут № 30',
-        date: '13.06-17.06.2021',
+        region: { id: 23, name: 'Краснодарский край' },
+        name: 'Маршрут № 30: через горы к Черному морю через приют Фишт',
+        date: '13.06 - 17.06.2021',
         track:
           'https://nakarte.me/#m=11/43.96193/39.92157&l=O/J&nktl=qFWWNS3OZpTVRQS3gZG4xg',
         report:

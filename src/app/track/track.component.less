@@ -1,5 +1,7 @@
-.container, .flex-row-btn {
-   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+.container,
+.flex-row-btn {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .container {
@@ -9,52 +11,56 @@
 }
 
 .itemsTable {
-    img {
-        height: 15px;
-    }
-    td.mat-cell:last-of-type {
-        width: 10%;
-    }
-     .mat-column-name {
-      width: 15%;
-    }
-    .mat-column-date {
-      width: 10%;
-    }
+  img {
+    height: 15px;
+  }
+  td.mat-cell:last-of-type {
+    width: 10%;
+  }
+  .mat-column-name {
+    width: 15%;
+  }
+  .mat-column-date {
+    width: 10%;
+  }
 }
 
 td.name {
   cursor: pointer;
   padding-left: 0 5px;
+  color: navy;
+  &:hover {
+    color: mediumblue;
+  }
 }
 
 tr.mat-header-row {
-    height: 30px;
+  height: 30px;
 }
 
 .filter__select,
 .search {
-    margin: 2vh 0;
-    width: 60vw;
+  margin: 2vh 0;
+  width: 60vw;
 }
 
 .scrollbar {
-    float: left;
-    background: #F5F5F5;
-    overflow-y: scroll;
-    margin-bottom: 25px;
-    height: 44vh;
-    position: fixed;
-    bottom: 25px;
-    margin-top: 200px;
+  float: left;
+  background: #f5f5f5;
+  overflow-y: scroll;
+  margin-bottom: 25px;
+  height: 44vh;
+  position: fixed;
+  bottom: 25px;
+  margin-top: 200px;
 }
 
 td.mat-cell:last-of-type {
-    padding-right: 7vw;
+  padding-right: 7vw;
 }
 
 .mat-expansion-panel-body {
-    padding: 0 24px 0 !important;
+  padding: 0 24px 0 !important;
 }
 
 .mat-expansion-panel {
@@ -69,31 +75,34 @@ td.mat-cell:last-of-type {
   border: 1px dotted black !important;
 }
 
- .mat-select-panel .mat-option {//контейнер опций
-    left: 100px;
+.mat-select-panel .mat-option {
+  //контейнер опций
+  left: 100px;
 }
 
-.mat-option { //1 опция
+.mat-option {
+  //1 опция
   width: 250px;
   top: 0;
   height: 15px;
 }
 
-td.mat-cell{
+td.mat-cell {
   padding-left: 5px;
 }
-.mat-column-flag img, .mat-column-flag2 img {
+.mat-column-flag img,
+.mat-column-flag2 img {
   height: 20px;
   margin-top: 5px;
 }
 .mat-column-name {
-    min-width: 150px;
+  min-width: 150px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 375px) {
   .scrollbar {
-      overflow-x: scroll;
-      width: 100%;
+    overflow-x: scroll;
+    width: 100%;
   }
   .mat-column-country {
     display: none;
@@ -104,10 +113,14 @@ td.mat-cell{
   .mat-column-report {
     display: none;
   }
-  .mat-column-name, .mat-column-date, .mat-column-track, .mat-column-report {
+  .mat-column-name,
+  .mat-column-date,
+  .mat-column-track,
+  .mat-column-report {
     font-size: 0.8em;
   }
-  td.mat-column-date, td.mat-column-track {
+  td.mat-column-date,
+  td.mat-column-track {
     font-size: 0.6em;
   }
 

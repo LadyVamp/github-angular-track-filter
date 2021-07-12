@@ -1,43 +1,36 @@
 <div class="container">
 	<div class="content">
-		<br>
-		<div class="gray">{{item.id}}</div>
+		<div>{{item.id}}</div>
 		<b>{{item.name}}</b>
 		<div class="item">
 			<div class="parent_img">
 				<img src="{{ item.flag }}" class="item-details__img">
-            </div>
-				<div class="item-details__descr">
-					<p>
-						Страна: {{item.country.name}}
-						<span *ngIf="item.country2">
-                     , {{item.country2.name}}
-                  </span>
-						<span *ngIf="item.country3">
-                     , {{item.country3.name}}
-                  </span>
-						<span *ngIf="item.region" class="region">
-                    , {{item.region.name}}
-                  </span>
-					</p>
-
-					<p>
-						Даты прохождения маршрута: {{item.date}}
-					</p>
-					<p *ngIf="item.track">
-						<a href="{{item.track}}" target="_blank">Трек</a>
-					</p>
-					<p *ngIf="item.distance">
-						Пройденное расстояние: {{item.distance}} км
-					</p>
-					<p *ngIf="item.report">
-						<a href="{{item.report}}" target="_blank">Отчет</a>
-					</p>
-					<!-- {{item.map}} -->
-          <!-- <button routerLink="/home">Назад</button>        -->
-          <button mat-raised-button color="primary" routerLink="/home">Назад</button>
-				</div>
 			</div>
-			<br>
-    </div>
+			<div class="item-details__descr">
+				<p>
+					Страна: {{item.country.name}},
+					<span *ngIf="item.country2.name !== ''">{{item.country2.name}},</span>
+					<span *ngIf="item.country3.name !== ''"> {{item.country3.name}}</span>
+					<span *ngIf="item.region">{{item.region.name}}</span>
+				</p>
+
+				<p>
+					Даты прохождения маршрута: {{item.date}}
+				</p>
+				<p *ngIf="item.track">
+					<a href="{{item.track}}" target="_blank">Трек</a>
+				</p>
+				<p *ngIf="item.distance">
+					Пройденное расстояние: {{item.distance}} км
+				</p>
+				<p *ngIf="item.report">
+					<a href="{{item.report}}" target="_blank">Отчет</a>
+				</p>
+				<!-- {{item.map}} -->
+				<!-- <button routerLink="/home">Назад</button>        -->
+				<button mat-raised-button color="primary" routerLink="/home">Назад</button>
+			</div>
 		</div>
+		<br>
+	</div>
+</div>
