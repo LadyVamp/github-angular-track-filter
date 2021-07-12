@@ -1,13 +1,15 @@
 <div class="container">
 	<div class="content">
-		<div>{{item.id}}</div>
 		<b>{{item.name}}</b>
 		<div class="item">
-			<div class="parent_img">
-				<img src="{{ item.flag }}" class="item-details__img">
-			</div>
+			<!-- <div class="parent_img">
+				<img src="{{ item.country.flag }}" class="item-details__img">
+			</div> -->
 			<div class="item-details__descr">
 				<p>
+					<img src="{{ item.country.flag }}" class="item-details__img">
+					<img src="{{ item.country2.flag }}" class="item-details__img">
+					<img src="{{ item.country3.flag }}" class="item-details__img">
 					Страна: {{item.country.name}},
 					<span *ngIf="item.country2.name !== ''">{{item.country2.name}}</span>
 					<span *ngIf="item.country2.name !== '' && item.country3.name !== ''">, </span>

@@ -40,7 +40,7 @@ export class ItemsServiceService {
         country3: { id: 1, name: '', flag: '' },
         region: { id: 12, name: 'Нижегородская обл.' },
         name: 'Велопоход 1 к.с. по Нижегородской области',
-        date: '16.09-22.09.2017',
+        date: '16.09 - 22.09.2017',
         track: 'https://www.gpsies.com/mapFolder.do?id=98189',
         distance: 355.2,
         report:
@@ -62,7 +62,7 @@ export class ItemsServiceService {
         },
         country3: { id: 1, name: '', flag: '' },
         name: 'Лазуревые струи',
-        date: '28.04-13.05.2018',
+        date: '28.04 - 13.05.2018',
         track: 'https://www.gpsies.com/map.do?fileId=jpmzllxfszzjatsv',
         distance: 631.87
       },
@@ -77,7 +77,7 @@ export class ItemsServiceService {
         country3: { id: 1, name: '', flag: '' },
         region: { id: 51, name: 'Мурманская обл.' },
         name: 'Велопоход 4 к.с. по Кольскому полуострову',
-        date: '14.07-29.07.2018',
+        date: '14.07 - 29.07.2018',
         track: 'https://www.gpsies.com/map.do?fileId=ghqkvmkegjdrkwbk',
         report:
           'https://drive.google.com/drive/u/0/folders/1-7M09DJhyAeIiVkqZAmAQoh98m3S2peq',
